@@ -1,18 +1,50 @@
 
-body {
+   body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scroll bars */
-}
-
-video {
-    position: fixed;
+    height: 100%;
+  }
+  
+  .section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  #video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -1; /* Ensure the video is behind other elements */
-}
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  /* Add styling for other sections as needed */
+  #about {
+    background-color: #d8cece; /* Change the background color for the about section */
+  }
+  
+  #contact {
+    background-color: #d8cece; /* Change the background color for the contact section */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('img-back.png'); /* Replace with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; 
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
